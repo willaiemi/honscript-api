@@ -105,3 +105,6 @@ dist
 
 # Visual Studio Workspace Settings
 .vscode
+
+# Secret
+config.js
