@@ -28,7 +28,7 @@ async function main() {
     // }
   });
 
-  const dbUrl = 'mongodb://localhost:27017/beta';
+  const dbUrl = 'mongodb://127.0.0.1:27017/beta';
 
   await server.register({
     plugin: require('hapi-auth-jwt2'),
