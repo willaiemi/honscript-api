@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,5 +22,8 @@
     "joi": "^14.3.1",
     "moment": "^2.24.0",
     "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "pm2": "^4.2.3"
   }
 }
