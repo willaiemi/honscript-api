@@ -16,7 +16,7 @@ async function main() {
   // The connection object takes some
   // configuration, including the port
   const server = new Hapi.Server({
-    port: 3333,
+    port: 3000,
     host: 'localhost',
     // routes: {
     //   validate: {
