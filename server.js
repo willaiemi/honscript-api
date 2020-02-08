@@ -64,7 +64,7 @@ async function main() {
       auth: false,
     },
     handler: function () {
-      return 'Tá trollando é? É pq essa rota não existe...';
+      return 'Alek.';
     }
   })
 
