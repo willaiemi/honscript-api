@@ -21,7 +21,9 @@ module.exports = {
       user.token = token;
       user.tokenExpireAt = moment().add(1, 'hour').toISOString();
       await user.save();
-      return h.response({ token, id: user._id, date: moment().toISOString() }).code(200);
+      const response = h.response({ token, id: user._id, date: moment().toISOString() }).code(200);
+      console.log(response);
+      return response;
     },
     validate: {
       payload: loginSchema,

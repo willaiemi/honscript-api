@@ -7,6 +7,7 @@ const glob = require('glob');
 const path = require('path');
 const secret = require('./config');
 const https = require('https');
+const moment = require('moment');
 
 async function validate() {
   return true;
@@ -63,8 +64,20 @@ async function main() {
     options: {
       auth: false,
     },
-    handler: function () {
-      return 'Alek.';
+    handler: function (req, h) {
+      const a = {
+        "/api/users/login": {
+          Route: "/api/users/login",
+          "User-Agent": "Honscript Algar v1.0",
+          Nome: "Willian Duarte",
+          Data: moment().format('DD/MM/YYYY HH:mm:ss'),
+          "Status Code": 200,
+          Headers: "Mais algo",
+        }
+      }
+      console.table(a["/api/users/login"]);
+
+      return h.response('Alek.').code(200);
     }
   })
 
