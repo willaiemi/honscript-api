@@ -63,8 +63,8 @@ async function main() {
     options: {
       auth: false,
     },
-    handler: function () {
-      return 'Alek.';
+    handler: function (req, h) {
+      return h.response({ now: new Date() }).code(200);
     }
   })
 
